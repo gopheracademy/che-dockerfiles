@@ -1,8 +1,8 @@
-cd $(pwd)/stack-base/debian
+cd $(pwd)/recipes/stack-base/debian
 
 docker build -t eclipse/stack-base:debian .
-cd ../..
-cd $(pwd)/stack-base/ubuntu
+cd ../../..
+cd $(pwd)/recipes/stack-base/ubuntu
 docker build -t eclipse/stack-base:ubuntu .
 cd ../..
 dir=$(find . -maxdepth 3 -mindepth 1 -type d -not -path '*/\.*' -exec bash -c 'cd "$0" && pwd' {} \;)
