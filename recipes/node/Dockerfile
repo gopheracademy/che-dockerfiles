@@ -42,5 +42,5 @@ RUN cd /home/user && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NO
   && sudo ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
 EXPOSE 3000 5000 9000
-RUN sudo npm install -g npm@latest
+RUN sudo curl -L https://npmjs.org/install.sh | sudo sh
 RUN sudo npm install --unsafe-perm -g gulp bower grunt grunt-cli yeoman-generator yo generator-angular generator-karma generator-webapp

@@ -90,9 +90,9 @@ RUN apk upgrade --update && \
     echo -e "${PASS}\n${PASS}" | passwd user && \
     chown -R user /home/user/
 
-RUN mkdir /usr/che \
-    && wget -qO /usr/che/che https://raw.githubusercontent.com/eclipse/che/master/che.sh \
-    && chmod +x /usr/che/che
+#RUN mkdir /usr/che \
+#    && wget -qO /usr/che/che https://raw.githubusercontent.com/eclipse/che/master/che.sh \
+#    && chmod +x /usr/che/che
 
 ENV DOCKER_HOST=tcp://192.168.65.1 \
     M2_HOME=/usr/lib/apache-maven-$MAVEN_VERSION 

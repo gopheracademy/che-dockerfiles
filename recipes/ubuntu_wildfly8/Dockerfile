@@ -11,7 +11,7 @@ EXPOSE 4403 8000 8080 9990 22
 
 LABEL che:server:8080:ref=wildfly che:server:9990:ref=jboss che:server:8080:protocol=http che:server:8000:ref=tomcat8-debug che:server:8000:protocol=http
 
-ENV MAVEN_VERSION=3.3.9 \
+ENV MAVEN_VERSION=3.3.9
 
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64 \
      M2_HOME=/home/user/apache-maven-$MAVEN_VERSION
